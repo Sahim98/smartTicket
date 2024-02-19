@@ -4,10 +4,6 @@ module.exports = {
   theme: {
    
     extend: {
-      spacing: {
-        'neg-796': '-796px',
-        'neg-501': '-501px',
-      },
     }
   },
   darkTheme: "light",
