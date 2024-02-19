@@ -15,8 +15,8 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="">
-    <main>
+  <body>
+    <main id="main" class="">
       <header class="mx-auto container">
         <nav>
           <div class="navbar bg-base-100">
@@ -257,7 +257,7 @@
                     <button class="btn px-8 text-[#03071280]" id="b3">B3</button>
                     <button class="btn px-8 text-[#03071280]" id="b4">B4</button>
                   </div>
-                  <div id="b"></div>
+        
 
                 </div>
             </div>
@@ -281,17 +281,17 @@
                 <p>BDT <span id="total-amt">0</span></p>
               </div>
               
-              <div class="relative flex">
-                <input type="text" placeholder="Have any copupon?" class="input input-bordered w-full max-w-xs h-16 items-center" />
+              <div class="relative flex" id="coupon-sec">
+                <input id="coupon" type="text" placeholder="Have any copupon?" class="input input-bordered w-full max-w-xs h-16 items-center" />
                 <button class="btn absolute rounded-xl  bg-[#1DD100]
-                text-white right-20 my-2 font-bold">Apply</button>
+                text-white right-20 my-2 font-bold" onclick="checkCoupon()" >Apply</button>
               </div>
               <div class="flex justify-between font-semibold my-4">
                 <p>Grand Total</p>
-                <p>BDT 1100</p>
+                <p>BDT <span id="grand-total">0</span></p>
               </div>
               </div>
-              <div class="my-6">
+              <!-- <div class="my-6 hidden">
                 <form action="">
                   <label  class=" font-bold">
                     Passenger Name*
@@ -310,14 +310,15 @@
                   <input type="tel" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs mt-4 mb-6" />
                   <br>
                   
-                  <button class="btn btn-active bg-[#1DD100] w-full font-bold border-0 text-white text-xl"> Next</button>
+              
       
                 </form>
                 <div class="flex mt-6 justify-around">
                   <a  class=" text-[#03071299] underline">Terms and Conditions</a>
                   <a  class=" text-[#03071299] underline">Cancellation Policy</a>
                 </div>
-              </div>
+              </div> -->
+              <button  class="mt-6 btn btn-active bg-[#1DD100] w-full font-bold border-0 text-white text-xl"> Next</button>
             </div>  
             </div>
           </div>
@@ -348,7 +349,7 @@
       </footer> 
       
     </main>
-    <script src="/scripts/task.js"></script>
-    <script src="/scripts/utility.js"></script>
+    <script src="./scripts/task.js"></script>
+    <script src="./scripts/utility.js"></script>
   </body>
 </html>
