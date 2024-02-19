@@ -291,34 +291,21 @@
                 <p>BDT <span id="grand-total">0</span></p>
               </div>
               </div>
-              <!-- <div class="my-6 hidden">
-                <form action="">
-                  <label  class=" font-bold">
-                    Passenger Name*
-                  </label> <br>
-                  <input type="text" placeholder="Enter your name" class="input input-bordered w-full max-w-xs mt-4 mb-6" />
-                 <br>
-                  <label  class=" font-bold">
-                    Phone Number*
-                  </label> <br>
-                  <input type="tel" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs mt-4 mb-6" />
-
-                  <br>
-                  <label  class=" font-bold">
-                    Email ID
-                  </label> <br>
-                  <input type="tel" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs mt-4 mb-6" />
-                  <br>
-                  
-              
-      
-                </form>
-                <div class="flex mt-6 justify-around">
-                  <a  class=" text-[#03071299] underline">Terms and Conditions</a>
-                  <a  class=" text-[#03071299] underline">Cancellation Policy</a>
-                </div>
-              </div> -->
-              <button  class="mt-6 btn btn-active bg-[#1DD100] w-full font-bold border-0 text-white text-xl"> Next</button>
+          
+              <!-- Open the modal using ID.showModal() method -->
+              <button class="mt-6 btn btn-active bg-[#1DD100] w-full font-bold border-0 text-white text-xl" onclick="my_modal_1.showModal()">Next</button>
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+     <div class="flex flex-col justify-center items-center space-y-6">
+      <img src="images/success.png" alt="">
+      <p class="font-bold text-2xl">SUCCESS</p>
+       <p class="font-bold">  Thank you for Booking Our Bus Seats. 
+        We are working hard to find the best service and deals for you.</p>
+        <p class="text-[#4A4A4A]">Shortly you will find a confirmation in your email.</p>
+        <button class="bg-[#27AE60] text-white font-semibold px-10 py-3 rounded-3xl" onclick="window.location.reload();"> Continue</button>
+     </div>
+  </div>
+</dialog>
             </div>  
             </div>
           </div>
