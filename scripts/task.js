@@ -10,7 +10,7 @@ document.addEventListener('click', function(e){
         let el = document.createElement('div');
         el.classList.add('flex');
         el.classList.add('justify-between');
-        
+      
         let el1 = document.createElement('p'),
         el2 = document.createElement('p'),
         el3 = document.createElement('p');
@@ -22,6 +22,7 @@ document.addEventListener('click', function(e){
         el.appendChild(el3);
         let parent = document.getElementById('ticket');
         parent.appendChild(el); 
+        console.log(parent)
         let val = getTextElementValueById('total-amt');
         setTextElementValueById('total-amt', val+550);
     }
