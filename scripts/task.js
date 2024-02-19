@@ -3,7 +3,10 @@ document.addEventListener('click', function(e)
 {
 
     const list = ['a1', 'a2', 'a3', 'a4','b1', 'b2', 'b3', 'b4'];
-    let ID = e.target.id, len = 0;
+    let ID = e.target.id;
+
+    let len = getTextElementValueById('total-amt')/550+1;
+    console.log(len);
 
 
 
