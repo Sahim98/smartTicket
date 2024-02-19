@@ -64,4 +64,3 @@ function setTextElementValueById(elementId, value){
 
 
 
-

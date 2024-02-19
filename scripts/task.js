@@ -1,30 +1,52 @@
 //let totalBooked = 0;
+let IDs = [];
+let ids;
 document.addEventListener('click', function(e)
 {
 
     const list = ['a1', 'a2', 'a3', 'a4','b1', 'b2', 'b3', 'b4'];
     let ID = e.target.id;
-
-    let len = getTextElementValueById('total-amt')/550+1;
-    console.log(len);
-
-
-
+    ids = ID.toUpperCase();
     if(list.includes(ID))
     {
-        if(setBackgroundColorById(ID))
+        if(IDs.includes(ids))
         {
-            //totalBooked++;
-            ID = ID.toUpperCase();  
+            const box = document.getElementById(ids);
+            box.remove();
+            seatEmpty();
+            let val = getTextElementValueById('total-amt');
+            setTextElementValueById('total-amt', val-550);
+            val = getTextElementValueById('grand-total');
+            setTextElementValueById('grand-total', val-550);
+
+        }
+        else if(IDs.length <4){
+            setBackgroundColorById(ID); 
+            IDs.push(ids);
             seatFull();
-            let el = document.createElement('div');
+            pushElement();
+            let val = getTextElementValueById('total-amt');
+            setTextElementValueById('total-amt', val+550);
+            val = getTextElementValueById('grand-total');
+            setTextElementValueById('grand-total', val+550);
+
+        }
+    }
+    console.log(IDs);
+
+})
+
+
+function pushElement()
+{
+    let el = document.createElement('div');
             el.classList.add('flex');
             el.classList.add('justify-between');
-            el.setAttribute('id',ID);
+            el.setAttribute('id',ids);
             let el1 = document.createElement('p'),
             el2 = document.createElement('p'),
             el3 = document.createElement('p');
-            el1.innerText = ID;
+            el1.innerText = ids;
             el2.innerText = 'economy' ;
             el3.innerText = '550';
             el.appendChild(el1);
@@ -32,25 +54,7 @@ document.addEventListener('click', function(e)
             el.appendChild(el3);
             let parent = document.getElementById('ticket');
             parent.appendChild(el); 
-            let val = getTextElementValueById('total-amt');
-            setTextElementValueById('total-amt', val+550);
-            val = getTextElementValueById('grand-total');
-            setTextElementValueById('grand-total', val+550);
-
-        }
-        else
-        {
-            const box = document.getElementById(ID.toUpperCase());
-            box.remove();
-            seatEmpty();
-            let val = getTextElementValueById('total-amt');
-            setTextElementValueById('total-amt', val-550);
-            val = getTextElementValueById('grand-total');
-            setTextElementValueById('grand-total', val-550);
-        }
-    }
-
-})
+}
 
 function checkCoupon(){
     let coupon = document.getElementById('coupon').value;
@@ -77,17 +81,18 @@ function checkCoupon(){
 
 function seatEmpty()
 {
+   // totalBooked--;
     let seatLeft = 'seats-left';
     let j = getTextElementValueById(seatLeft);
-    //console.log('seats left ',j);
     setTextElementValueById(seatLeft,j+1);
 }
 
 function seatFull()
 {
+   // totalBooked++;
     let seatLeft = 'seats-left';
     let j = getTextElementValueById(seatLeft);
-   // console.log('seats left ',j);
+   
     setTextElementValueById(seatLeft,j-1);
 }
    
