@@ -8,15 +8,13 @@ function showElementById(elementId) {
     element.classList.remove('hidden');
 }
 
-function setBackgroundColorById(elementId)
-{
+function setBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
     removeBackgroundColorById(elementId);
     element.classList.add('bg-[#1DD100]');
 }
 
-function allocate()
-{
+function allocate(){
     let seatID= "seatNumber";
     let i = getTextElementValueById(seatID);
     setTextElementValueById(seatID,i+1);
@@ -96,8 +94,7 @@ function checkCoupon(){
     }
 }
 
-function AddTotal()
-{
+function AddTotal(){
     let val = getTextElementValueById('total-amt');
     setTextElementValueById('total-amt', val+550);
     val = getTextElementValueById('grand-total');
@@ -105,19 +102,23 @@ function AddTotal()
 
 }
 
-function SubstractTotal()
-{
+function SubstractTotal(){
     let val = getTextElementValueById('total-amt');
     setTextElementValueById('total-amt', val-550);
     val = getTextElementValueById('grand-total');
     setTextElementValueById('grand-total', val-550);
 }
 
-function seatEmptyById(id)
-{
+function seatEmptyById(id){
    
     let j = getTextElementValueById(id);
     setTextElementValueById(id,j-1);
+}
+
+function removeAttributeById(id,attr){
+    let e = document.getElementById(id);
+    e.classList.remove(attr);
+   // console.log(e.classList);
 }
 
 function seatFullById(id)
