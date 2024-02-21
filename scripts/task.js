@@ -12,6 +12,7 @@ input.addEventListener("input", function(event) {
     if(buttons.length > 0 && inputValue != '')
     {
         removeAttributeById('next','pointer-events-none');
+        setBackgroundColorById('next');
     }
 });
 
