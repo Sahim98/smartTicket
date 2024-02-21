@@ -16,26 +16,23 @@ document.addEventListener('click', function(e)
             removeFromList(buttons,id);
             removeElementById(ID);
             SubstractTotal();
+            seatEmptyById('seatNumber');
+            seatFullById('seats-left');
         }
         else if(buttons.length < 4)
         {
             setBackgroundColorById(id);
             buttons.push(id);
+            IDs.push(ID);
             pushElementById(ID);
             AddTotal();
+            seatFullById('seatNumber');
+            seatEmptyById('seats-left');
         }
     }
-    //console.log(buttons,IDs);
+    console.log(buttons,IDs);
 
 
 });
 
 
-function removeFromList(list, item) {
-    let index = list.indexOf(item);
-    if (index !== -1) 
-    {
-        list.splice(index, 1);
-    }
-    return list;
-}

@@ -113,4 +113,25 @@ function SubstractTotal()
     setTextElementValueById('grand-total', val-550);
 }
 
+function seatEmptyById(id)
+{
+   
+    let j = getTextElementValueById(id);
+    setTextElementValueById(id,j-1);
+}
 
+function seatFullById(id)
+{
+    let j = getTextElementValueById(id);
+    setTextElementValueById(id,j+1);
+}
+
+
+function removeFromList(list, item) {
+    let index = list.indexOf(item);
+    if (index !== -1) 
+    {
+        list.splice(index, 1);
+    }
+    return list;
+}
