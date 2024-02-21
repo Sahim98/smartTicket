@@ -92,6 +92,9 @@ function checkCoupon(){
             setTextElementValueById('grand-total', val*.80);
         }
     }
+    else{
+        alert('Please provide a valid coupon');
+    }
 }
 
 function AddTotal(){
