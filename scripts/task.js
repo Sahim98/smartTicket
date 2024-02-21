@@ -3,7 +3,9 @@ let buttons = [];
 const list = ['a1', 'a2', 'a3', 'a4','b1', 'b2', 'b3', 'b4'];
 //let ids;
 const input = document.getElementById("phone-number");
+const apply = document.getElementById("apply");
 let inputValue = '';
+
 
 input.addEventListener("input", function(event) {
    
@@ -49,6 +51,12 @@ document.addEventListener('click', function(e)
             seatFullById('seatNumber');
             seatEmptyById('seats-left');
            
+        }
+
+        if(buttons.length==4)
+        {
+            removeAttributeById('apply','pointer-events-none');
+            setBackgroundColorById('apply');
         }
     }
     //console.log(buttons,IDs);

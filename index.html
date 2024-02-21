@@ -296,8 +296,8 @@
               
               <div class="relative flex" id="coupon-sec">
                 <input id="coupon" type="text" placeholder="Have any copupon?" class="input input-bordered w-full max-w-xs h-16 items-center" />
-                <button class="btn absolute rounded-xl  bg-[#1DD100]
-                text-white right-20 my-2 font-bold" onclick="checkCoupon()" >Apply</button>
+                <button class="btn absolute rounded-xl  
+                text-white right-20 my-2 font-bold pointer-events-none" onclick="checkCoupon()" id="apply">Apply</button>
               </div>
               <div class="flex justify-between font-semibold my-4">
                 <p>Grand Total</p>
@@ -320,7 +320,6 @@
                     Email ID
                   </label> <br>
                   <input type="tel" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs mt-4 mb-6" />
-
                   <br>
                       <!-- Open the modal using ID.showModal() method pointer-events-none-->
                 </form>
