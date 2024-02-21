@@ -118,7 +118,12 @@ function seatEmptyById(id){
 function removeAttributeById(id,attr){
     let e = document.getElementById(id);
     e.classList.remove(attr);
-   // console.log(e.classList);
+}
+
+function setAttributeById(id,attr){
+    let e = document.getElementById(id);
+    e.classList.add(attr);
+
 }
 
 function seatFullById(id)

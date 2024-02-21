@@ -29,6 +29,8 @@ document.addEventListener('click', function(e)
     let id = e.target.id;
     let ID = id.toUpperCase();
 
+  
+
     if(list.includes(id))
     {
         if(buttons.includes(id) )
@@ -53,11 +55,19 @@ document.addEventListener('click', function(e)
            
         }
 
-        if(buttons.length==4)
-        {
-            removeAttributeById('apply','pointer-events-none');
-            setBackgroundColorById('apply');
-        }
+      
+
+      
+    }
+    if(buttons.length==4)
+    {
+        removeAttributeById('apply','pointer-events-none');
+        setBackgroundColorById('apply');
+    }
+    else
+    {
+        setAttributeById('apply','pointer-events-none');
+        removeBackgroundColorById('apply');
     }
     //console.log(buttons,IDs);
 
